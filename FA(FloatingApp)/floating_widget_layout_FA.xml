@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         tools:ignore="UselessParent">
 
-        <!-- This layout is the Collapsed layout -->
+        
         <RelativeLayout
             android:id="@+id/Layout_Collapsed"
             android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
 
         </RelativeLayout>
 
-        <!-- 이 레이아웃은 확장 레이아웃입니다-->
+        
 
         <LinearLayout
             android:id="@+id/Layout_Expended"
