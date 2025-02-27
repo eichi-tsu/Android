@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@drawable/pikachu"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/activity_check_recoder_scene"
+    tools:context=".CheckRecoder">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="669dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/titletv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="420px"
+            android:layout_weight="1"
+            android:background="#B3F8EA"
+            android:text="총합계"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/titletv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="370px"
+            android:layout_weight="1"
+            android:background="#B3F8EA"
+            android:text="리스트형식"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/sumlay"
+            android:layout_width="411dp"
+            android:layout_height="637dp"
+            android:layout_marginTop="100px"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="74dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/syultsuseki" />
+
+                <TextView
+                    android:id="@+id/syultusseki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="122dp"
+                    android:layout_weight="1"
+                    android:text="출석:"
+                    android:textSize="60sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="74dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/chikoku" />
+
+                <TextView
+                    android:id="@+id/chikoku"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="지각:"
+                    android:textSize="60sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="74dp"
+                    android:layout_height="173dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/hyouketus" />
+
+                <TextView
+                    android:id="@+id/keltusseki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="결석:"
+                    android:textSize="60sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/listlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/haikei2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="160px"
+                        android:paddingRight="30px"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/ctv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="420px"
+        android:background="#2196F3"
+        android:text="출석형식"
+        android:textSize="24sp" />
+
+</LinearLayout>

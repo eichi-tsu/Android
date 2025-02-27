@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:background="@drawable/pikachu"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/mapbtn"
+            android:layout_width="89dp"
+            android:layout_height="89dp"
+            android:layout_marginLeft="150dp"
+            map:srcCompat="@android:drawable/ic_dialog_map" />
+
+        <ImageButton
+            android:id="@+id/imgbtn"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220px"
+            android:rotationX="2"
+            android:src="@drawable/emiya_tokei" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <AnalogClock
+                android:id="@+id/ac"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginLeft="160px"
+                android:visibility="visible" />
+
+            <DigitalClock
+                android:id="@+id/dc"
+                android:layout_width="480px"
+                android:layout_height="400px"
+                android:layout_marginLeft="250px"
+                android:textColor="#673AB7"
+                android:textSize="34sp"
+                android:visibility="invisible"></DigitalClock>
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btncheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="400px"
+        android:text="출석" />
+
+</LinearLayout>
+
+
