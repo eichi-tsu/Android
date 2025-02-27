@@ -28,8 +28,7 @@ public class WidgetService extends Service {
     TextView tvWidth;
     float height, width;
 
-    // 플로팅 위젯 뷰가 왼쪽에 있는지 오른쪽에 있는지 확인하는 변수
-    // 처음에는 플로팅 위젯 뷰를 오른쪽에 표시하므로 false로 설정
+    
     private boolean isLeft = false;
 
 
@@ -55,7 +54,7 @@ public class WidgetService extends Service {
 
         }
 
-        // 우리가 만든 플로팅 뷰 레이아웃 확장
+        
         mFloatingView = LayoutInflater.from(this).inflate(R.layout.layout_widget, null);
 
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams(WindowManager.LayoutParams.WRAP_CONTENT,
@@ -65,8 +64,7 @@ public class WidgetService extends Service {
                 PixelFormat.TRANSLUCENT);
 
 
-        // 보기 위치 지정
-        // 처음에는보기가 오른쪽 상단 모서리에 추가되며 필요에 따라 x-y 좌표를 변경
+       
         layoutParams.gravity = Gravity.TOP|Gravity.RIGHT;
         layoutParams.x = 0;
         layoutParams.y = 100;
@@ -95,7 +93,7 @@ public class WidgetService extends Service {
 
 
 
-        // 사용자의 터치 동작을 사용하여 플로팅 뷰를 드래그하여 이동
+        
         tvWidth.setOnTouchListener(new View.OnTouchListener() {
 
             int initialx, initialy;
@@ -113,11 +111,11 @@ public class WidgetService extends Service {
 
 
 
-                        //터치 위치 좌표 얻기
+                        
                         initialTouchX = motionEvent.getRawX();
                         initialTouchY = motionEvent.getRawY();
 
-                        // 초기 위치 기억
+                        
                         initialx = layoutParams.x;
                         initialy = layoutParams.y;
 
@@ -128,18 +126,18 @@ public class WidgetService extends Service {
                         imageClose.setVisibility(view.GONE);
 
 
-                        // 초기 좌표와 현재 좌표의 차이 가져 오기
+                       
                         layoutParams.x = initialx+(int) (initialTouchX-motionEvent.getRawX());
                         layoutParams.y = initialy+(int)(motionEvent.getRawY()-initialTouchY);
 
 
-                        // 제거 이미지 주변 거리
+                        
                         if (layoutParams.y>(height * 0.6 )) {
                             stopSelf();
 
                         }
                         else {
-                            //사용자가 플로팅 뷰를 드래그하면 위치 재설정
+                            
                             if ( layoutParams.x <=  500) {
                                 isLeft = false;
                                 layoutParams.x = 0;
@@ -163,11 +161,11 @@ public class WidgetService extends Service {
 
                     case MotionEvent.ACTION_MOVE:
 
-                        // 초기 좌표와 현재 좌표의 차이 가져 오기
+                        
                         layoutParams.x = initialx+(int)(initialTouchX-motionEvent.getRawX());
                         layoutParams.y = initialy +(int) (motionEvent.getRawY()- initialTouchY);
 
-                        // 새로운 X 및 Y 좌표로 레이아웃 업데이트
+                        
                         windowManager.updateViewLayout(mFloatingView, layoutParams);
 
                         if (layoutParams.y> (height * 0.6)){
@@ -190,7 +188,7 @@ public class WidgetService extends Service {
     }
 
 
-    // 앱이 종료될때 실행
+    
     @Override
     public void onDestroy(){
         super.onDestroy();
